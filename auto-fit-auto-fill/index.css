@@ -1,0 +1,21 @@
+.container {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+
+.container2 {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+/*
+    auto-fill adds new column tracks, albeit of not having actual elements, at every threshold. In this case, 100px;
+    auto-fit makes sure that all the available elements fit the grid.
+
+    Under the hood, both adds new column tracks but auto-fit collapses newly added columns.
+*/

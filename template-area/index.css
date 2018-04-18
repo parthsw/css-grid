@@ -1,0 +1,35 @@
+/*
+    You can use auto as well as fr on rows but it will work based on the height of parent element.
+*/
+
+.container{
+    height: 100%;
+    display:grid;    
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 60px auto 40px; 
+    grid-gap: 5px;
+    /*
+        grid-template-areas:
+        "h h h h h h h h h h h h"
+        "m m c c c c c c c c c c"
+        "f f f f f f f f f f f f"
+            Naming your layout based on the available columns & rows. Similar letters should form a rectangle to work. Use '.' for blank cells.
+    */
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "m m c c c c c c c c c c"
+        "f f f f f f f f f f f f"
+}
+.header{
+    /* Use the name defined in template-area to define element's area. It will take up that much rows & columns.  */
+    grid-area: h;
+}
+.menu{
+    grid-area: m;
+}
+.content{
+    grid-area: c;
+}
+.footer{
+    grid-area: f;
+}

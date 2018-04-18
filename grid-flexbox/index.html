@@ -1,0 +1,30 @@
+<!-- 
+    flexbox is built for one-dimensional layout while grid is for two-dimensional layout.
+    flexbox is content first while grid is layout first.
+
+    In flexbox, You can simply make the div flexible box by assigning display:flex, and then, align the elements based on the conetent. i.e. To move third div to right hand side, simply apply margin-left:auto to it. 
+
+    In grid, once you make a container grid based, you need to define layout of that grid by defining rows and columns of it. Later on, based on that layout, you can place the elements in it's layout.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="basic.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <p>FLEXBOX HEADER</p>
+        <div class="flexbox-header">
+            <div>HOME</div>
+            <div>SEARCH</div>
+            <div>LOGOUT</div>
+        </div>
+        <br>
+        <p>GRID PAGE</p>
+        <div class="grid-page">
+            <div class="header">HEADER</div>
+            <div class="menu">MENU</div>
+            <div class="content">CONTENT</div>
+            <div class="footer">FOOTER</div>
+        </div>
+    </body>
+</html>

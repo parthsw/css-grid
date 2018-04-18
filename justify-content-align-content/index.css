@@ -1,0 +1,20 @@
+.container {
+    border: 1px solid black;
+    height: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    justify-content: space-evenly;
+    align-content:center;
+}
+/* 
+    justify-content: center;
+    Justifies the content horizontally (start, center, end etc..)
+    space-between: Puts space between the elements.
+    space-evenly: Distributes space equally among the items.
+    space-aroud: First & last space would be of half of the size compare to the in-between spaces.
+    align-content:center;
+    Aligns the content vertically.
+*/
+

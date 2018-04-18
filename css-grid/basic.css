@@ -1,0 +1,45 @@
+html,body{
+    font-family: 'Roboto', sans-serif;   
+}
+.container{
+    display:grid;
+    /* 
+        :: grid-template-columns:repeat(3,1fr) :: 
+            repeat(no of columns, width of a column)
+            1fr takes the entire available width
+        :: grid-template-rows:repeat(2,50px) :: 
+            repeat(no of rows, height of a row)
+            1fr takes the entire available width
+        :: grid-gap:5px ::
+            Gap between each grid element    
+    */
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+    grid-gap: 5px;
+    /*
+        Shorthand for defining rows and columns
+        grid-template: repeat(2,50px) / repeat(3,1fr)
+        Remember drawing an L: First rows & then columns
+    */
+}
+
+/* 
+    How div elements work?
+        div are block level elements. They won't tolerate any elements on their left or right side, and thus, take up the entire width. However, height of div elements are calculated from it's descendants. So, Its' not vertically blocked. It will only take as much height as it requires for it's content to display.
+*/
+.container div{
+    color:#fff;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container div:nth-child(1n){
+    background-color: #C1DBB3;
+}
+.container div:nth-child(3n){
+    background-color: #7798AB;
+}
+.container div:nth-child(2n){
+    background-color: #FF8966;
+}

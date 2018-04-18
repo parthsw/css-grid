@@ -1,0 +1,47 @@
+.container{
+    display:grid;    
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 60px 83vh 40px; 
+    grid-gap: 5px;
+}
+/*  1) Way 1
+        grid-column-start:1;
+        grid-column-end: 3;
+        This means that grid column should start at column line 1 and should finish at column line 3. We have two columns in this example,
+        and thus, three column lines.
+    2) Way 2
+        Shorthand method of above syntax: start / end
+        grid-column: 1  / 3;
+    3) Way 3
+        grid-column: 1 / span 2;
+        Start at column 1 and span across two columns
+    4) Way 4
+        :: grid-column: 1 / -1 :: Start at column 1 & span till last column line
+*/
+.header{
+    grid-column: -11 / -1;    
+}
+.menu{
+    grid-column: 1 / span 2;
+    grid-row: 1 / -1;
+}
+.content{
+    grid-column: -11 / -1;
+}
+.footer{
+    grid-column: -11 / -1;
+}
+
+/* .header{
+    grid-column: 1 / 11;
+}
+.menu{
+    grid-column: 11 / span 2;
+    grid-row: 1 / -1;
+}
+.content{
+    grid-column: 1 / 11;
+}
+.footer{
+    grid-column: 1 / 11;
+} */

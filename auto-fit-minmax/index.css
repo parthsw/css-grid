@@ -1,0 +1,23 @@
+.container{
+    height: 100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+    /* rows declaration can be removed if you have used grid-auto-rows, in this case, all rows will be created implicitly. */
+    grid-template-rows: 100px 100px;
+    grid-auto-rows: 100px;
+    grid-gap: 3px;
+
+    /* 
+        ::grid-template-columns: repeat(auto-fit,minmax(100px, 1fr))::
+        auto-fit: vary the no of columns based on the width of grid
+        minmax: minimum & maximum width of a column
+        ::grid-template-rows: repeat(auto,auto)::
+        Will take up the height automaticaly based on the parent container's height.
+        --Implicit Rows--
+        ::grid-auto-rows:100px::
+        To handle the height of rows which get created automatically when we shrink the browser size, use grid-auto-rows property.
+    */
+}
+
+/* https://scrimba.com/p/pWqLHa/cQgzgUN
+https://scrimba.com/c/cgGwVhb */
